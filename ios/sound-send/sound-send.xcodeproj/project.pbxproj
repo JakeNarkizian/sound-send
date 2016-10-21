@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		234514E91DB9E68E00C62800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234514E81DB9E68E00C62800 /* AppDelegate.swift */; };
+		234514EB1DB9E68E00C62800 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234514EA1DB9E68E00C62800 /* ViewController.swift */; };
+		234514EE1DB9E68E00C62800 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234514EC1DB9E68E00C62800 /* Main.storyboard */; };
+		234514F01DB9E68E00C62800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234514EF1DB9E68E00C62800 /* Assets.xcassets */; };
+		234514F31DB9E68E00C62800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234514F11DB9E68E00C62800 /* LaunchScreen.storyboard */; };
+		234514FE1DB9E68E00C62800 /* sound_sendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234514FD1DB9E68E00C62800 /* sound_sendTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		234514FA1DB9E68E00C62800 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 234514DD1DB9E68E00C62800 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 234514E41DB9E68E00C62800;
+			remoteInfo = "sound-send";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		234514E51DB9E68E00C62800 /* sound-send.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sound-send.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		234514E81DB9E68E00C62800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		234514EA1DB9E68E00C62800 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		234514ED1DB9E68E00C62800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		234514EF1DB9E68E00C62800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		234514F21DB9E68E00C62800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		234514F41DB9E68E00C62800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234514F91DB9E68E00C62800 /* sound-sendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sound-sendTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		234514FD1DB9E68E00C62800 /* sound_sendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sound_sendTests.swift; sourceTree = "<group>"; };
+		234514FF1DB9E68E00C62800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		234514E21DB9E68E00C62800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234514F61DB9E68E00C62800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		234514DC1DB9E68E00C62800 = {
+			isa = PBXGroup;
+			children = (
+				234514E71DB9E68E00C62800 /* sound-send */,
+				234514FC1DB9E68E00C62800 /* sound-sendTests */,
+				234514E61DB9E68E00C62800 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		234514E61DB9E68E00C62800 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				234514E51DB9E68E00C62800 /* sound-send.app */,
+				234514F91DB9E68E00C62800 /* sound-sendTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		234514E71DB9E68E00C62800 /* sound-send */ = {
+			isa = PBXGroup;
+			children = (
+				234514E81DB9E68E00C62800 /* AppDelegate.swift */,
+				234514EA1DB9E68E00C62800 /* ViewController.swift */,
+				234514EC1DB9E68E00C62800 /* Main.storyboard */,
+				234514EF1DB9E68E00C62800 /* Assets.xcassets */,
+				234514F11DB9E68E00C62800 /* LaunchScreen.storyboard */,
+				234514F41DB9E68E00C62800 /* Info.plist */,
+			);
+			path = "sound-send";
+			sourceTree = "<group>";
+		};
+		234514FC1DB9E68E00C62800 /* sound-sendTests */ = {
+			isa = PBXGroup;
+			children = (
+				234514FD1DB9E68E00C62800 /* sound_sendTests.swift */,
+				234514FF1DB9E68E00C62800 /* Info.plist */,
+			);
+			path = "sound-sendTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		234514E41DB9E68E00C62800 /* sound-send */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 234515021DB9E68E00C62800 /* Build configuration list for PBXNativeTarget "sound-send" */;
+			buildPhases = (
+				234514E11DB9E68E00C62800 /* Sources */,
+				234514E21DB9E68E00C62800 /* Frameworks */,
+				234514E31DB9E68E00C62800 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sound-send";
+			productName = "sound-send";
+			productReference = 234514E51DB9E68E00C62800 /* sound-send.app */;
+			productType = "com.apple.product-type.application";
+		};
+		234514F81DB9E68E00C62800 /* sound-sendTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 234515051DB9E68E00C62800 /* Build configuration list for PBXNativeTarget "sound-sendTests" */;
+			buildPhases = (
+				234514F51DB9E68E00C62800 /* Sources */,
+				234514F61DB9E68E00C62800 /* Frameworks */,
+				234514F71DB9E68E00C62800 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				234514FB1DB9E68E00C62800 /* PBXTargetDependency */,
+			);
+			name = "sound-sendTests";
+			productName = "sound-sendTests";
+			productReference = 234514F91DB9E68E00C62800 /* sound-sendTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		234514DD1DB9E68E00C62800 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Jake Narkizian";
+				TargetAttributes = {
+					234514E41DB9E68E00C62800 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					234514F81DB9E68E00C62800 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 234514E41DB9E68E00C62800;
+					};
+				};
+			};
+			buildConfigurationList = 234514E01DB9E68E00C62800 /* Build configuration list for PBXProject "sound-send" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 234514DC1DB9E68E00C62800;
+			productRefGroup = 234514E61DB9E68E00C62800 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				234514E41DB9E68E00C62800 /* sound-send */,
+				234514F81DB9E68E00C62800 /* sound-sendTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		234514E31DB9E68E00C62800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234514F31DB9E68E00C62800 /* LaunchScreen.storyboard in Resources */,
+				234514F01DB9E68E00C62800 /* Assets.xcassets in Resources */,
+				234514EE1DB9E68E00C62800 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234514F71DB9E68E00C62800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		234514E11DB9E68E00C62800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234514EB1DB9E68E00C62800 /* ViewController.swift in Sources */,
+				234514E91DB9E68E00C62800 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		234514F51DB9E68E00C62800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234514FE1DB9E68E00C62800 /* sound_sendTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		234514FB1DB9E68E00C62800 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 234514E41DB9E68E00C62800 /* sound-send */;
+			targetProxy = 234514FA1DB9E68E00C62800 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		234514EC1DB9E68E00C62800 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				234514ED1DB9E68E00C62800 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		234514F11DB9E68E00C62800 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				234514F21DB9E68E00C62800 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		234515001DB9E68E00C62800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		234515011DB9E68E00C62800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		234515031DB9E68E00C62800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "sound-send/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Narkizian.sound-send";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		234515041DB9E68E00C62800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "sound-send/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Narkizian.sound-send";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		234515061DB9E68E00C62800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "sound-sendTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Narkizian.sound-sendTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sound-send.app/sound-send";
+			};
+			name = Debug;
+		};
+		234515071DB9E68E00C62800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "sound-sendTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Narkizian.sound-sendTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sound-send.app/sound-send";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		234514E01DB9E68E00C62800 /* Build configuration list for PBXProject "sound-send" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234515001DB9E68E00C62800 /* Debug */,
+				234515011DB9E68E00C62800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		234515021DB9E68E00C62800 /* Build configuration list for PBXNativeTarget "sound-send" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234515031DB9E68E00C62800 /* Debug */,
+				234515041DB9E68E00C62800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		234515051DB9E68E00C62800 /* Build configuration list for PBXNativeTarget "sound-sendTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234515061DB9E68E00C62800 /* Debug */,
+				234515071DB9E68E00C62800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 234514DD1DB9E68E00C62800 /* Project object */;
+}
