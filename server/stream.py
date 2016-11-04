@@ -1,41 +1,46 @@
 import os
 
 from server import BASE_URL
-from server.channel import NoSuchChannelError
+from server import NoSuchChannelError
+import logging
 
+log = logging.getLogger(__name__)
 
 class StreamSegmenter(object):
-    MAX_SEG_FILES = 16
+    MAX_SEGS_ON_DISK = 16
     SEG_FILE_REDUCE_BY = 4
+    MAX_SEG_LEN = 10
     def __init__(self, channelName, seglen=10):
-        channelPath = os.path.join(os.getcwd(), channelName)
-        self.segpath = '%s/segs' % channelName
-        if not os.path.exists(channelPath):
-            raise NoSuchChannelError()
+        channel_path = os.path.join(os.getcwd(), channelName)
+        if not os.path.exists(channel_path):
+            raise NoSuchChannelError
         else:
-            os.mkdir(self.segpath)
-        self.seglen = seglen
-        self.channelname = channelName
-        self.segcnt = 0
-        self.segfilecnt = 0
-        self.smallestseg = 1
-        super(StreamSegmenter, self).__init__()
+            self.seg_dir_abspath = os.path.join(channel_path, 'segs')
+            os.mkdir(self.seg_dir_abspath)
+            self.channel_name = channelName
+            self.total_segs = 0
+            super(StreamSegmenter, self).__init__()
 
     def add_segment(self, segmentData):
         """
         Adds a segment to the current stream.
         :return:
         """
-        if self.segfilecnt == self.MAX_SEG_FILES:
+        segs_on_disk = os.listdir(self.seg_dir_abspath)
+        if len(segs_on_disk) >= self.MAX_SEGS_ON_DISK:
+            log.debug('Disk segment overflow for channel %s. Deleting oldest %d segments.',
+                      self.channel_name, self.SEG_FILE_REDUCE_BY)
+            # sort list by modification time from youngest to oldest
+            segs_on_disk.sort(key=lambda x: os.path.getmtime(self.seg_abspath_from_string(x)),
+                              reverse=True)
             for i in range(self.SEG_FILE_REDUCE_BY):
-                os.remove(os.path.join(os.getcwd(), self.segment_path(self.smallestseg + i)))
-            self.segfilecnt -= self.SEG_FILE_REDUCE_BY
-            self.smallestseg += self.SEG_FILE_REDUCE_BY
-        assert self.segfilecnt < self.MAX_SEG_FILES
-        with open(os.path.join(os.getcwd(), self.segment_path(self.segcnt+1)), 'wb') as writable:
+                os.remove(self.seg_abspath_from_string(segs_on_disk.pop()))
+
+        assert len(segs_on_disk) < self.MAX_SEGS_ON_DISK
+        with open(self.seg_abspath_from_index(self.total_segs+1), 'wb') as writable:
             writable.write(segmentData)
-        self.segcnt += 1
-        self.segfilecnt += 1
+        self.total_segs += 1
+        log.debug('Added segment %d to %s', self.total_segs, self.channel_name)
 
     def get_current_index(self):
         """
@@ -47,15 +52,18 @@ class StreamSegmenter(object):
         # header
         s  = "#EXT-X-VERSION:3\n"  # defines protocol version
         s += "#EXTM3U\n"
-        s += "#EXT-X-TARGETDURATION:%s\n" % self.seglen
+        s += "#EXT-X-TARGETDURATION:%s\n" % self.MAX_SEG_LEN
         s += "#EXT-X-MEDIA-SEQUENCE:1\n\n"
         # body
-        for i in range(self.segcnt):
-            s += "#EXTINF:%.3f,\n" % self.seglen
-            s += "http://%s/%s\n" % (BASE_URL, self.segment_path(i+1))
+        for i in range(self.total_segs):
+            s += "#EXTINF:%.3f,\n" % self.MAX_SEG_LEN
+            s += "http://%s/%s/segs/%d.ts\n" % (BASE_URL, self.channel_name, i+1)
         # footer
         s += "#EXT-X-ENDLIST\n"
         return s
 
-    def segment_path(self, i):
-        return '%s/%d.ts' % (self.segpath, i)
+    def seg_abspath_from_index(self, i):
+        return self.seg_abspath_from_string('%d.ts' % i)
+
+    def seg_abspath_from_string(self, s):
+        return os.path.join(self.seg_dir_abspath, s)
