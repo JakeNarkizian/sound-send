@@ -80,6 +80,13 @@ def destroy_channel_request(name, uuid):
         channels.remove(name, uuid)
     return handler.response
 
+@server.route('/%s/active' % Channel.RESERVED_NAME)
+def active_channel_request():
+    handler = ExceptionHandler()
+    with handler.handle(status=200, mimetype='application/json'):
+        handler.set_response_attr(data=json.dumps(channels.active_channels))
+    return handler.response
+
 # Channel specific methods for listener
 @server.route('/<name>/index.M3U8')
 def channel_index_request(name):
