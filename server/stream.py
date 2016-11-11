@@ -44,8 +44,6 @@ class StreamSegmenter(object):
 
     def get_current_index(self):
         """
-        This file should have a .M3U8 extension
-
         For details about the formatting of this string see:
             https://tools.ietf.org/html/draft-pantos-http-live-streaming-20
         """
