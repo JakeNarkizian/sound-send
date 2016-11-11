@@ -53,6 +53,9 @@ class Channel(object):
     def index(self):
         return self.stream.get_current_index()
 
+    def segment(self, i):
+        return self.stream.get_segment(i)
+
 class ChannelManager(object):
     def __init__(self):
         self._channels = dict()
