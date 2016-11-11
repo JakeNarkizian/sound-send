@@ -104,3 +104,7 @@ class ChannelManager(object):
     def remove(self, name, uuid):
         self._get_channel(name, uuid=uuid).destroy()
         del self._channels[name]
+
+    @property
+    def active_channels(self):
+        return self._channels.keys()
