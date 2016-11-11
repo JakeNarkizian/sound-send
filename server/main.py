@@ -6,6 +6,7 @@ import flask
 import os
 from channel import Channel, ChannelCreationError, ChannelManager, NoSuchChannel, \
     UnauthorizedChannelRequest
+from server.stream import NoSuchSegment, NoSuchSegmentOnDisk
 
 server = flask.Flask(__name__)
 
@@ -18,13 +19,12 @@ class ExceptionHandler(object):
     """
     def __init__(self):
         self._response = None
+        self._to_set = {}
         super(ExceptionHandler, self).__init__()
 
-    def response(self, **kwargs):
-        """
-        Any keyword args are used to override attributes of the response.
-        """
-        for k,v  in kwargs.items():
+    @property
+    def response(self):
+        for k,v  in self._to_set.items():
             setattr(self._response, k, v)
         return self._response
 
@@ -46,16 +46,30 @@ class ExceptionHandler(object):
         except ChannelCreationError as e:
             self._response = flask.Response("Invalid channel name '%s'." % e.message, status=400,
                                             mimetype='text/plain')
+        except NoSuchSegment as e:
+            self._response = flask.Response("The segment '%s' does not exist." % e.message,
+                                            status=404, mimetype='text/plain')
+        except NoSuchSegmentOnDisk as e:
+            self._response = flask.Response("The segment '%s' does not exist on disk. "
+                                            "It may be too old." % e.message,
+                                            status=410, mimetype='text/plain')
         else:
             self._response = flask.Response(*args, **kwargs)
 
+    def set_response_attr(self, **kwargs):
+        """
+        Any keyword args are used to override attributes of the response.
+        """
+        for k, v in kwargs.items():
+            self._to_set[k] = v
 
+# Channel Manager methods
 @server.route('/%s/create/<name>/<uuid>' % Channel.RESERVED_NAME)
 def create_channel_request(name, uuid):
     handler = ExceptionHandler()
     with handler.handle("Channel '%s' created." % name, status=201, mimetype='text/plain'):
         channels.create(name, uuid)
-    return handler.response()
+    return handler.response
 
 
 @server.route('/%s/destroy/<name>/<uuid>' % Channel.RESERVED_NAME)
@@ -63,16 +77,23 @@ def destroy_channel_request(name, uuid):
     handler = ExceptionHandler()
     with handler.handle("Channel '%s' destroyed." % name, status=200, mimetype='text/plain'):
         channels.remove(name, uuid)
-    return handler.response()
+    return handler.response
 
-
+# Channel specific methods
 @server.route('/<name>/index.M3U8')
 def channel_index_request(name):
     handler = ExceptionHandler()
-    index = ''
-    with handler.handle(index, status=200, mimetype='application/x-mpegURL'):
-        index = channels[name].index()
-    return handler.response(data=index)
+    with handler.handle(status=200, mimetype='application/x-mpegURL'):
+        handler.set_response_attr(data=channels[name].index())
+    return handler.response
+
+
+@server.route('/<name>/segs/<int:i>.ts')
+def channel_segment_request(name, i):
+    handler = ExceptionHandler()
+    with handler.handle(status=200, mimetype='video/MP2T'):  #TODO: .ts and and the mime type here are probably wrong
+        handler.set_response_attr(data=channels[name].segment(i))
+    return handler.response
 
 
 if __name__ == "__main__":
