@@ -4,6 +4,7 @@ from contextlib import contextmanager
 
 import flask
 import os
+import json
 from channel import Channel, ChannelCreationError, ChannelManager, NoSuchChannel, \
     UnauthorizedChannelRequest
 from server.stream import NoSuchSegment, NoSuchSegmentOnDisk
@@ -79,7 +80,7 @@ def destroy_channel_request(name, uuid):
         channels.remove(name, uuid)
     return handler.response
 
-# Channel specific methods
+# Channel specific methods for listener
 @server.route('/<name>/index.M3U8')
 def channel_index_request(name):
     handler = ExceptionHandler()
@@ -95,6 +96,13 @@ def channel_segment_request(name, i):
         handler.set_response_attr(data=channels[name].segment(i))
     return handler.response
 
+# Channel specific methods for broadcaster
+@server.route('/<name>/<uuid>/listener_count')
+def channel_listener_count_request(name, uuid):
+    handler = ExceptionHandler()
+    with handler.handle(status=200, mimetype='application/json'):
+        handler.set_response_attr(data=json.dumps(dict(count=channels[name].listeners)))
+    return handler.response
 
 if __name__ == "__main__":
     tempdir = os.path.join(os.getcwd(), str(UUID.uuid4()))
