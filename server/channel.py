@@ -39,7 +39,12 @@ class Channel(object):
                 raise ChannelCreationError(name)
 
         self.stream = StreamSegmenter(self.name)
+        self._listeners = {0:0}  # maps segment index to number of downloads
         super(Channel, self).__init__()
+
+    @property
+    def listeners(self):
+        return self._listeners[self.stream.total_segs]
 
     def destroy(self):
         """
@@ -54,7 +59,13 @@ class Channel(object):
         return self.stream.get_current_index()
 
     def segment(self, i):
-        return self.stream.get_segment(i)
+        seg = self.stream.get_segment(i)
+        try:
+            self._listeners[i] += 1
+        except KeyError:
+            self._listeners[i] = 1
+        return seg
+
 
 class ChannelManager(object):
     def __init__(self):
