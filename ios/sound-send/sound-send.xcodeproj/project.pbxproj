@@ -7,52 +7,140 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		234514E91DB9E68E00C62800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234514E81DB9E68E00C62800 /* AppDelegate.swift */; };
-		234514EB1DB9E68E00C62800 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234514EA1DB9E68E00C62800 /* ViewController.swift */; };
-		234514F01DB9E68E00C62800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234514EF1DB9E68E00C62800 /* Assets.xcassets */; };
-		234514F31DB9E68E00C62800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234514F11DB9E68E00C62800 /* LaunchScreen.storyboard */; };
-		234514FE1DB9E68E00C62800 /* sound_sendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234514FD1DB9E68E00C62800 /* sound_sendTests.swift */; };
-		7EDE37851DE4D5B900EDA568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE37841DE4D5B900EDA568 /* Main.storyboard */; };
-		7EDE37891DE4D60D00EDA568 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE37861DE4D60D00EDA568 /* lock.png */; };
-		7EDE378A1DE4D60D00EDA568 /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE37871DE4D60D00EDA568 /* mic.png */; };
-		7EDE378B1DE4D60D00EDA568 /* speaker.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE37881DE4D60D00EDA568 /* speaker.gif */; };
+		194DC9651DE5D1BA003882B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194DC9641DE5D1BA003882B5 /* AppDelegate.swift */; };
+		194DC9671DE5D1BA003882B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194DC9661DE5D1BA003882B5 /* ViewController.swift */; };
+		194DC96A1DE5D1BA003882B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194DC9681DE5D1BA003882B5 /* Main.storyboard */; };
+		194DC96C1DE5D1BA003882B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194DC96B1DE5D1BA003882B5 /* Assets.xcassets */; };
+		194DC96F1DE5D1BA003882B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194DC96D1DE5D1BA003882B5 /* LaunchScreen.storyboard */; };
+		194DC97A1DE5D1BA003882B5 /* sound_sendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194DC9791DE5D1BA003882B5 /* sound_sendTests.swift */; };
+		194DC9851DE5D1BA003882B5 /* sound_sendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194DC9841DE5D1BA003882B5 /* sound_sendUITests.swift */; };
+		194DC9931DE5D663003882B5 /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194DC9921DE5D663003882B5 /* RecordAudioViewController.swift */; };
+		19FF43EF1DE5DE9F00A1F685 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FF43E21DE5DE9000A1F685 /* Alamofire.framework */; };
+		19FF43F01DE5DE9F00A1F685 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19FF43E21DE5DE9000A1F685 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		234514FA1DB9E68E00C62800 /* PBXContainerItemProxy */ = {
+		194DC9761DE5D1BA003882B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 234514DD1DB9E68E00C62800 /* Project object */;
+			containerPortal = 194DC9591DE5D1BA003882B5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 234514E41DB9E68E00C62800;
+			remoteGlobalIDString = 194DC9601DE5D1BA003882B5;
 			remoteInfo = "sound-send";
+		};
+		194DC9811DE5D1BA003882B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 194DC9591DE5D1BA003882B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 194DC9601DE5D1BA003882B5;
+			remoteInfo = "sound-send";
+		};
+		19FF43E11DE5DE9000A1F685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		19FF43E31DE5DE9000A1F685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		19FF43E51DE5DE9000A1F685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		19FF43E71DE5DE9000A1F685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		19FF43E91DE5DE9000A1F685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		19FF43EB1DE5DE9000A1F685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		19FF43ED1DE5DE9000A1F685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		19FF43F11DE5DE9F00A1F685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		19FF43F31DE5DE9F00A1F685 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				19FF43F01DE5DE9F00A1F685 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		234514E51DB9E68E00C62800 /* sound-send.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sound-send.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		234514E81DB9E68E00C62800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		234514EA1DB9E68E00C62800 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		234514EF1DB9E68E00C62800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		234514F21DB9E68E00C62800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		234514F41DB9E68E00C62800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		234514F91DB9E68E00C62800 /* sound-sendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sound-sendTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		234514FD1DB9E68E00C62800 /* sound_sendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sound_sendTests.swift; sourceTree = "<group>"; };
-		234514FF1DB9E68E00C62800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EDE37841DE4D5B900EDA568 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7EDE37861DE4D60D00EDA568 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
-		7EDE37871DE4D60D00EDA568 /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic.png; sourceTree = "<group>"; };
-		7EDE37881DE4D60D00EDA568 /* speaker.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = speaker.gif; sourceTree = "<group>"; };
+		194DC9611DE5D1BA003882B5 /* sound-send.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sound-send.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		194DC9641DE5D1BA003882B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		194DC9661DE5D1BA003882B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		194DC9691DE5D1BA003882B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		194DC96B1DE5D1BA003882B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		194DC96E1DE5D1BA003882B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		194DC9701DE5D1BA003882B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		194DC9751DE5D1BA003882B5 /* sound-sendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sound-sendTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		194DC9791DE5D1BA003882B5 /* sound_sendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sound_sendTests.swift; sourceTree = "<group>"; };
+		194DC97B1DE5D1BA003882B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		194DC9801DE5D1BA003882B5 /* sound-sendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sound-sendUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		194DC9841DE5D1BA003882B5 /* sound_sendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sound_sendUITests.swift; sourceTree = "<group>"; };
+		194DC9861DE5D1BA003882B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		194DC9921DE5D663003882B5 /* RecordAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAudioViewController.swift; sourceTree = "<group>"; };
+		19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		234514E21DB9E68E00C62800 /* Frameworks */ = {
+		194DC95E1DE5D1BA003882B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19FF43EF1DE5DE9F00A1F685 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194DC9721DE5D1BA003882B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		234514F61DB9E68E00C62800 /* Frameworks */ = {
+		194DC97D1DE5D1BA003882B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,109 +150,158 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		234514DC1DB9E68E00C62800 = {
+		194DC9581DE5D1BA003882B5 = {
 			isa = PBXGroup;
 			children = (
-				234514E71DB9E68E00C62800 /* sound-send */,
-				234514FC1DB9E68E00C62800 /* sound-sendTests */,
-				234514E61DB9E68E00C62800 /* Products */,
+				194DC9631DE5D1BA003882B5 /* sound-send */,
+				194DC9781DE5D1BA003882B5 /* sound-sendTests */,
+				194DC9831DE5D1BA003882B5 /* sound-sendUITests */,
+				194DC9621DE5D1BA003882B5 /* Products */,
+				19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
-		234514E61DB9E68E00C62800 /* Products */ = {
+		194DC9621DE5D1BA003882B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				234514E51DB9E68E00C62800 /* sound-send.app */,
-				234514F91DB9E68E00C62800 /* sound-sendTests.xctest */,
+				194DC9611DE5D1BA003882B5 /* sound-send.app */,
+				194DC9751DE5D1BA003882B5 /* sound-sendTests.xctest */,
+				194DC9801DE5D1BA003882B5 /* sound-sendUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		234514E71DB9E68E00C62800 /* sound-send */ = {
+		194DC9631DE5D1BA003882B5 /* sound-send */ = {
 			isa = PBXGroup;
 			children = (
-				234514E81DB9E68E00C62800 /* AppDelegate.swift */,
-				7EDE37841DE4D5B900EDA568 /* Main.storyboard */,
-				234514EA1DB9E68E00C62800 /* ViewController.swift */,
-				7EDE37861DE4D60D00EDA568 /* lock.png */,
-				7EDE37871DE4D60D00EDA568 /* mic.png */,
-				7EDE37881DE4D60D00EDA568 /* speaker.gif */,
-				234514EF1DB9E68E00C62800 /* Assets.xcassets */,
-				234514F11DB9E68E00C62800 /* LaunchScreen.storyboard */,
-				234514F41DB9E68E00C62800 /* Info.plist */,
+				194DC9641DE5D1BA003882B5 /* AppDelegate.swift */,
+				194DC9661DE5D1BA003882B5 /* ViewController.swift */,
+				194DC9681DE5D1BA003882B5 /* Main.storyboard */,
+				194DC96B1DE5D1BA003882B5 /* Assets.xcassets */,
+				194DC96D1DE5D1BA003882B5 /* LaunchScreen.storyboard */,
+				194DC9701DE5D1BA003882B5 /* Info.plist */,
+				194DC9921DE5D663003882B5 /* RecordAudioViewController.swift */,
 			);
 			path = "sound-send";
 			sourceTree = "<group>";
 		};
-		234514FC1DB9E68E00C62800 /* sound-sendTests */ = {
+		194DC9781DE5D1BA003882B5 /* sound-sendTests */ = {
 			isa = PBXGroup;
 			children = (
-				234514FD1DB9E68E00C62800 /* sound_sendTests.swift */,
-				234514FF1DB9E68E00C62800 /* Info.plist */,
+				194DC9791DE5D1BA003882B5 /* sound_sendTests.swift */,
+				194DC97B1DE5D1BA003882B5 /* Info.plist */,
 			);
 			path = "sound-sendTests";
+			sourceTree = "<group>";
+		};
+		194DC9831DE5D1BA003882B5 /* sound-sendUITests */ = {
+			isa = PBXGroup;
+			children = (
+				194DC9841DE5D1BA003882B5 /* sound_sendUITests.swift */,
+				194DC9861DE5D1BA003882B5 /* Info.plist */,
+			);
+			path = "sound-sendUITests";
+			sourceTree = "<group>";
+		};
+		19FF43D71DE5DE9000A1F685 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19FF43E21DE5DE9000A1F685 /* Alamofire.framework */,
+				19FF43E41DE5DE9000A1F685 /* Alamofire iOS Tests.xctest */,
+				19FF43E61DE5DE9000A1F685 /* Alamofire.framework */,
+				19FF43E81DE5DE9000A1F685 /* Alamofire macOS Tests.xctest */,
+				19FF43EA1DE5DE9000A1F685 /* Alamofire.framework */,
+				19FF43EC1DE5DE9000A1F685 /* Alamofire tvOS Tests.xctest */,
+				19FF43EE1DE5DE9000A1F685 /* Alamofire.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		234514E41DB9E68E00C62800 /* sound-send */ = {
+		194DC9601DE5D1BA003882B5 /* sound-send */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 234515021DB9E68E00C62800 /* Build configuration list for PBXNativeTarget "sound-send" */;
+			buildConfigurationList = 194DC9891DE5D1BA003882B5 /* Build configuration list for PBXNativeTarget "sound-send" */;
 			buildPhases = (
-				234514E11DB9E68E00C62800 /* Sources */,
-				234514E21DB9E68E00C62800 /* Frameworks */,
-				234514E31DB9E68E00C62800 /* Resources */,
+				194DC95D1DE5D1BA003882B5 /* Sources */,
+				194DC95E1DE5D1BA003882B5 /* Frameworks */,
+				194DC95F1DE5D1BA003882B5 /* Resources */,
+				19FF43F31DE5DE9F00A1F685 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				19FF43F21DE5DE9F00A1F685 /* PBXTargetDependency */,
 			);
 			name = "sound-send";
 			productName = "sound-send";
-			productReference = 234514E51DB9E68E00C62800 /* sound-send.app */;
+			productReference = 194DC9611DE5D1BA003882B5 /* sound-send.app */;
 			productType = "com.apple.product-type.application";
 		};
-		234514F81DB9E68E00C62800 /* sound-sendTests */ = {
+		194DC9741DE5D1BA003882B5 /* sound-sendTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 234515051DB9E68E00C62800 /* Build configuration list for PBXNativeTarget "sound-sendTests" */;
+			buildConfigurationList = 194DC98C1DE5D1BA003882B5 /* Build configuration list for PBXNativeTarget "sound-sendTests" */;
 			buildPhases = (
-				234514F51DB9E68E00C62800 /* Sources */,
-				234514F61DB9E68E00C62800 /* Frameworks */,
-				234514F71DB9E68E00C62800 /* Resources */,
+				194DC9711DE5D1BA003882B5 /* Sources */,
+				194DC9721DE5D1BA003882B5 /* Frameworks */,
+				194DC9731DE5D1BA003882B5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				234514FB1DB9E68E00C62800 /* PBXTargetDependency */,
+				194DC9771DE5D1BA003882B5 /* PBXTargetDependency */,
 			);
 			name = "sound-sendTests";
 			productName = "sound-sendTests";
-			productReference = 234514F91DB9E68E00C62800 /* sound-sendTests.xctest */;
+			productReference = 194DC9751DE5D1BA003882B5 /* sound-sendTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		194DC97F1DE5D1BA003882B5 /* sound-sendUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194DC98F1DE5D1BA003882B5 /* Build configuration list for PBXNativeTarget "sound-sendUITests" */;
+			buildPhases = (
+				194DC97C1DE5D1BA003882B5 /* Sources */,
+				194DC97D1DE5D1BA003882B5 /* Frameworks */,
+				194DC97E1DE5D1BA003882B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				194DC9821DE5D1BA003882B5 /* PBXTargetDependency */,
+			);
+			name = "sound-sendUITests";
+			productName = "sound-sendUITests";
+			productReference = 194DC9801DE5D1BA003882B5 /* sound-sendUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		234514DD1DB9E68E00C62800 /* Project object */ = {
+		194DC9591DE5D1BA003882B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Jake Narkizian";
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Aditi Gupta";
 				TargetAttributes = {
-					234514E41DB9E68E00C62800 = {
-						CreatedOnToolsVersion = 8.0;
+					194DC9601DE5D1BA003882B5 = {
+						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
-					234514F81DB9E68E00C62800 = {
-						CreatedOnToolsVersion = 8.0;
+					194DC9741DE5D1BA003882B5 = {
+						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 234514E41DB9E68E00C62800;
+						TestTargetID = 194DC9601DE5D1BA003882B5;
+					};
+					194DC97F1DE5D1BA003882B5 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 194DC9601DE5D1BA003882B5;
 					};
 				};
 			};
-			buildConfigurationList = 234514E01DB9E68E00C62800 /* Build configuration list for PBXProject "sound-send" */;
+			buildConfigurationList = 194DC95C1DE5D1BA003882B5 /* Build configuration list for PBXProject "sound-send" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -172,32 +309,95 @@
 				en,
 				Base,
 			);
-			mainGroup = 234514DC1DB9E68E00C62800;
-			productRefGroup = 234514E61DB9E68E00C62800 /* Products */;
+			mainGroup = 194DC9581DE5D1BA003882B5;
+			productRefGroup = 194DC9621DE5D1BA003882B5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 19FF43D71DE5DE9000A1F685 /* Products */;
+					ProjectRef = 19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				234514E41DB9E68E00C62800 /* sound-send */,
-				234514F81DB9E68E00C62800 /* sound-sendTests */,
+				194DC9601DE5D1BA003882B5 /* sound-send */,
+				194DC9741DE5D1BA003882B5 /* sound-sendTests */,
+				194DC97F1DE5D1BA003882B5 /* sound-sendUITests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		19FF43E21DE5DE9000A1F685 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 19FF43E11DE5DE9000A1F685 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19FF43E41DE5DE9000A1F685 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = 19FF43E31DE5DE9000A1F685 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19FF43E61DE5DE9000A1F685 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 19FF43E51DE5DE9000A1F685 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19FF43E81DE5DE9000A1F685 /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = 19FF43E71DE5DE9000A1F685 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19FF43EA1DE5DE9000A1F685 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 19FF43E91DE5DE9000A1F685 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19FF43EC1DE5DE9000A1F685 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = 19FF43EB1DE5DE9000A1F685 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19FF43EE1DE5DE9000A1F685 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 19FF43ED1DE5DE9000A1F685 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
-		234514E31DB9E68E00C62800 /* Resources */ = {
+		194DC95F1DE5D1BA003882B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EDE37891DE4D60D00EDA568 /* lock.png in Resources */,
-				7EDE378A1DE4D60D00EDA568 /* mic.png in Resources */,
-				7EDE37851DE4D5B900EDA568 /* Main.storyboard in Resources */,
-				234514F31DB9E68E00C62800 /* LaunchScreen.storyboard in Resources */,
-				7EDE378B1DE4D60D00EDA568 /* speaker.gif in Resources */,
-				234514F01DB9E68E00C62800 /* Assets.xcassets in Resources */,
+				194DC96F1DE5D1BA003882B5 /* LaunchScreen.storyboard in Resources */,
+				194DC96C1DE5D1BA003882B5 /* Assets.xcassets in Resources */,
+				194DC96A1DE5D1BA003882B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		234514F71DB9E68E00C62800 /* Resources */ = {
+		194DC9731DE5D1BA003882B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194DC97E1DE5D1BA003882B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,38 +407,65 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		234514E11DB9E68E00C62800 /* Sources */ = {
+		194DC95D1DE5D1BA003882B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				234514EB1DB9E68E00C62800 /* ViewController.swift in Sources */,
-				234514E91DB9E68E00C62800 /* AppDelegate.swift in Sources */,
+				194DC9931DE5D663003882B5 /* RecordAudioViewController.swift in Sources */,
+				194DC9671DE5D1BA003882B5 /* ViewController.swift in Sources */,
+				194DC9651DE5D1BA003882B5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		234514F51DB9E68E00C62800 /* Sources */ = {
+		194DC9711DE5D1BA003882B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				234514FE1DB9E68E00C62800 /* sound_sendTests.swift in Sources */,
+				194DC97A1DE5D1BA003882B5 /* sound_sendTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194DC97C1DE5D1BA003882B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194DC9851DE5D1BA003882B5 /* sound_sendUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		234514FB1DB9E68E00C62800 /* PBXTargetDependency */ = {
+		194DC9771DE5D1BA003882B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 234514E41DB9E68E00C62800 /* sound-send */;
-			targetProxy = 234514FA1DB9E68E00C62800 /* PBXContainerItemProxy */;
+			target = 194DC9601DE5D1BA003882B5 /* sound-send */;
+			targetProxy = 194DC9761DE5D1BA003882B5 /* PBXContainerItemProxy */;
+		};
+		194DC9821DE5D1BA003882B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 194DC9601DE5D1BA003882B5 /* sound-send */;
+			targetProxy = 194DC9811DE5D1BA003882B5 /* PBXContainerItemProxy */;
+		};
+		19FF43F21DE5DE9F00A1F685 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 19FF43F11DE5DE9F00A1F685 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		234514F11DB9E68E00C62800 /* LaunchScreen.storyboard */ = {
+		194DC9681DE5D1BA003882B5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				234514F21DB9E68E00C62800 /* Base */,
+				194DC9691DE5D1BA003882B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		194DC96D1DE5D1BA003882B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				194DC96E1DE5D1BA003882B5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -246,7 +473,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		234515001DB9E68E00C62800 /* Debug */ = {
+		194DC9871DE5D1BA003882B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,16 +513,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		234515011DB9E68E00C62800 /* Release */ = {
+		194DC9881DE5D1BA003882B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -329,97 +557,135 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		234515031DB9E68E00C62800 /* Debug */ = {
+		194DC98A1DE5D1BA003882B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "sound-send/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Narkizian.sound-send";
+				PRODUCT_BUNDLE_IDENTIFIER = "gupta.aditi.sound-send";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		234515041DB9E68E00C62800 /* Release */ = {
+		194DC98B1DE5D1BA003882B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "sound-send/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Narkizian.sound-send";
+				PRODUCT_BUNDLE_IDENTIFIER = "gupta.aditi.sound-send";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		234515061DB9E68E00C62800 /* Debug */ = {
+		194DC98D1DE5D1BA003882B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "sound-sendTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Narkizian.sound-sendTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "gupta.aditi.sound-sendTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sound-send.app/sound-send";
 			};
 			name = Debug;
 		};
-		234515071DB9E68E00C62800 /* Release */ = {
+		194DC98E1DE5D1BA003882B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "sound-sendTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Narkizian.sound-sendTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "gupta.aditi.sound-sendTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sound-send.app/sound-send";
+			};
+			name = Release;
+		};
+		194DC9901DE5D1BA003882B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "sound-sendUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "gupta.aditi.sound-sendUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "sound-send";
+			};
+			name = Debug;
+		};
+		194DC9911DE5D1BA003882B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "sound-sendUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "gupta.aditi.sound-sendUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "sound-send";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		234514E01DB9E68E00C62800 /* Build configuration list for PBXProject "sound-send" */ = {
+		194DC95C1DE5D1BA003882B5 /* Build configuration list for PBXProject "sound-send" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				234515001DB9E68E00C62800 /* Debug */,
-				234515011DB9E68E00C62800 /* Release */,
+				194DC9871DE5D1BA003882B5 /* Debug */,
+				194DC9881DE5D1BA003882B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		234515021DB9E68E00C62800 /* Build configuration list for PBXNativeTarget "sound-send" */ = {
+		194DC9891DE5D1BA003882B5 /* Build configuration list for PBXNativeTarget "sound-send" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				234515031DB9E68E00C62800 /* Debug */,
-				234515041DB9E68E00C62800 /* Release */,
+				194DC98A1DE5D1BA003882B5 /* Debug */,
+				194DC98B1DE5D1BA003882B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		234515051DB9E68E00C62800 /* Build configuration list for PBXNativeTarget "sound-sendTests" */ = {
+		194DC98C1DE5D1BA003882B5 /* Build configuration list for PBXNativeTarget "sound-sendTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				234515061DB9E68E00C62800 /* Debug */,
-				234515071DB9E68E00C62800 /* Release */,
+				194DC98D1DE5D1BA003882B5 /* Debug */,
+				194DC98E1DE5D1BA003882B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194DC98F1DE5D1BA003882B5 /* Build configuration list for PBXNativeTarget "sound-sendUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194DC9901DE5D1BA003882B5 /* Debug */,
+				194DC9911DE5D1BA003882B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 234514DD1DB9E68E00C62800 /* Project object */;
+	rootObject = 194DC9591DE5D1BA003882B5 /* Project object */;
 }

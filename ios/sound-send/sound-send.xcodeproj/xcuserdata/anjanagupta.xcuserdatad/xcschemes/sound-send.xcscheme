@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "234514E41DB9E68E00C62800"
+               BlueprintIdentifier = "194DC9601DE5D1BA003882B5"
                BuildableName = "sound-send.app"
                BlueprintName = "sound-send"
                ReferencedContainer = "container:sound-send.xcodeproj">
@@ -32,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "234514F81DB9E68E00C62800"
+               BlueprintIdentifier = "194DC9741DE5D1BA003882B5"
                BuildableName = "sound-sendTests.xctest"
                BlueprintName = "sound-sendTests"
+               ReferencedContainer = "container:sound-send.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "194DC97F1DE5D1BA003882B5"
+               BuildableName = "sound-sendUITests.xctest"
+               BlueprintName = "sound-sendUITests"
                ReferencedContainer = "container:sound-send.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "234514E41DB9E68E00C62800"
+            BlueprintIdentifier = "194DC9601DE5D1BA003882B5"
             BuildableName = "sound-send.app"
             BlueprintName = "sound-send"
             ReferencedContainer = "container:sound-send.xcodeproj">
@@ -65,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "234514E41DB9E68E00C62800"
+            BlueprintIdentifier = "194DC9601DE5D1BA003882B5"
             BuildableName = "sound-send.app"
             BlueprintName = "sound-send"
             ReferencedContainer = "container:sound-send.xcodeproj">
@@ -84,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "234514E41DB9E68E00C62800"
+            BlueprintIdentifier = "194DC9601DE5D1BA003882B5"
             BuildableName = "sound-send.app"
             BlueprintName = "sound-send"
             ReferencedContainer = "container:sound-send.xcodeproj">

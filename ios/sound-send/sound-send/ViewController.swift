@@ -2,14 +2,14 @@
 //  ViewController.swift
 //  sound-send
 //
-//  Created by Jake Narkizian on 10/20/16.
-//  Copyright © 2016 Jake Narkizian. All rights reserved.
+//  Created by Aditi Gupta on 11/23/16.
+//  Copyright © 2016 Aditi Gupta. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-    //the base url, change it when we have one i guess?
+    
     let baseurl = "http://www.soundsend.com"
     let createchannelpath = "/channelmanager/createchannel/"
     let channelCreateSuccessStatusCode = 201
@@ -75,19 +75,18 @@ class ViewController: UIViewController {
         return message
     }
     
-    //MARK: properties
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    //MARK: actions
-    
+
+
 }
 

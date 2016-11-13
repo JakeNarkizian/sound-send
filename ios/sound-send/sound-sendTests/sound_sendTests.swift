@@ -2,8 +2,8 @@
 //  sound_sendTests.swift
 //  sound-sendTests
 //
-//  Created by Jake Narkizian on 10/20/16.
-//  Copyright © 2016 Jake Narkizian. All rights reserved.
+//  Created by Aditi Gupta on 11/23/16.
+//  Copyright © 2016 Aditi Gupta. All rights reserved.
 //
 
 import XCTest
@@ -37,5 +37,6 @@ class sound_sendTests: XCTestCase {
         let badcode = vc.channelCreateFailureStatusCode
         XCTAssert(vc.handleCreateChannelResponseCode(statuscode: badcode) != nil)
     }
+
     
 }

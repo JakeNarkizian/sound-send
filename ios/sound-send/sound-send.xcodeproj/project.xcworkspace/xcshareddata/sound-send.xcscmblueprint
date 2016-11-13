@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1B3DCBDD515AF7EE853EAA9B104817E2E1581D88",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 9223372036854775807,
+    "1B3DCBDD515AF7EE853EAA9B104817E2E1581D88" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "61440391-777A-4F1A-9C5B-1C4AC2DAA0C0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "sound-send\/Alamofire\/",
+    "1B3DCBDD515AF7EE853EAA9B104817E2E1581D88" : "sound-send\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "sound-send",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/sound-send\/sound-send.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JakeNarkizian\/sound-send.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1B3DCBDD515AF7EE853EAA9B104817E2E1581D88"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
+    }
+  ]
+}
