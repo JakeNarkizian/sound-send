@@ -20,6 +20,34 @@
                ReferencedContainer = "container:sound-send.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "19ED10161DC9BA3400FB687E"
+               BuildableName = "sound-sendTests.xctest"
+               BlueprintName = "sound-sendTests"
+               ReferencedContainer = "container:sound-send.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "19ED10211DC9BA3400FB687E"
+               BuildableName = "sound-sendUITests.xctest"
+               BlueprintName = "sound-sendUITests"
+               ReferencedContainer = "container:sound-send.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
