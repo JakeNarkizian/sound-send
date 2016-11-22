@@ -111,7 +111,8 @@ def channel_listener_count_request(name, uuid):
         handler.set_response_attr(data=json.dumps(dict(count=channels[name].listeners)))
     return handler.response
 
-if __name__ == "__main__":
+
+def main():
     tempdir = os.path.join(os.getcwd(), str(UUID.uuid4()))
     os.mkdir(tempdir)
     try:
@@ -119,3 +120,6 @@ if __name__ == "__main__":
         server.run()
     finally:
         shutil.rmtree(tempdir)
+
+if __name__ == "__main__":
+    main()
