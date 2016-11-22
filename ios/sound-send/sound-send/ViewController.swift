@@ -2,11 +2,13 @@
 //  ViewController.swift
 //  sound-send
 //
-//  Created by Jake Narkizian on 10/20/16.
-//  Copyright © 2016 Jake Narkizian. All rights reserved.
+//  Created by Full Guest Account on 11/14/16.
+//  Copyright © 2016 Full Guest Account. All rights reserved.
 //
 
 import UIKit
+import AVFoundation
+
 
 class ViewController: UIViewController {
     //the base url, change it when we have one i guess?
@@ -79,7 +81,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print ("I reached viewDidLoad in ViewController")
+        title = "What is that audio?"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAudio))
+        print ("I surpassed navigationItem")
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
         // Do any additional setup after loading the view, typically from a nib.
+            }
+        
+    
+    func addAudio() {
+        print ("I'm in addAudio")
+        let vc = RecordAudioViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,5 +103,7 @@ class ViewController: UIViewController {
     
     //MARK: actions
     
+
+
 }
 
