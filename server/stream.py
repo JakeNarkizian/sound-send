@@ -6,6 +6,15 @@ import logging
 
 log = logging.getLogger(__name__)
 
+
+class NoSuchSegmentOnDisk(Exception):
+    pass
+
+
+class NoSuchSegment(Exception):
+    pass
+
+
 class StreamSegmenter(object):
     MAX_SEGS_ON_DISK = 16
     SEG_FILE_REDUCE_BY = 4
@@ -42,10 +51,22 @@ class StreamSegmenter(object):
         self.total_segs += 1
         log.debug('Added segment %d to %s', self.total_segs, self.channel_name)
 
+    def get_segment(self, i):
+        """
+        Returns the bytes of the given segment if the segment file exists on the disk.
+        """
+        if i > self.total_segs:
+            # This should never happen
+            raise NoSuchSegment(str(i))
+        else:
+            try:
+                with open(self.seg_abspath_from_index(i), 'rb') as readable:
+                    return readable.read()
+            except IOError:
+                raise NoSuchSegmentOnDisk(str(i))
+
     def get_current_index(self):
         """
-        This file should have a .M3U8 extension
-
         For details about the formatting of this string see:
             https://tools.ietf.org/html/draft-pantos-http-live-streaming-20
         """

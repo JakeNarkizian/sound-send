@@ -1,5 +1,4 @@
 import shutil
-
 import os
 from server.stream import StreamSegmenter
 import logging
@@ -7,6 +6,14 @@ import logging
 log = logging.getLogger(__name__)
 
 class ChannelCreationError(Exception):
+    pass
+
+
+class NoSuchChannel(Exception):
+    pass
+
+
+class UnauthorizedChannelRequest(Exception):
     pass
 
 
@@ -20,21 +27,26 @@ class Channel(object):
         :param str broadcasterUUID: A practically unique string that is used to identify the owner.
         """
         if name == self.RESERVED_NAME:
-            raise ChannelCreationError()
+            raise ChannelCreationError(name)
         else:
             self.name = name
-            self.broadcasterUUID = broadcasterUUID
+            self.uuid = broadcasterUUID
             self._dir_path = os.path.join(os.getcwd(), name)
             try:
                 os.mkdir(self._dir_path)
             except OSError:
                 log.exception('')
-                raise ChannelCreationError()
+                raise ChannelCreationError(name)
 
         self.stream = StreamSegmenter(self.name)
+        self._listeners = {0:0}  # maps segment index to number of downloads
         super(Channel, self).__init__()
 
-    def destory(self):
+    @property
+    def listeners(self):
+        return self._listeners[self.stream.total_segs]
+
+    def destroy(self):
         """
         This destructor method removed the channel directory.
         """
@@ -42,3 +54,57 @@ class Channel(object):
             shutil.rmtree(self._dir_path)
         finally:
             pass # TODO: this should alert listeners that the channel has been closed
+
+    def index(self):
+        return self.stream.get_current_index()
+
+    def segment(self, i):
+        seg = self.stream.get_segment(i)
+        try:
+            self._listeners[i] += 1
+        except KeyError:
+            self._listeners[i] = 1
+        return seg
+
+
+class ChannelManager(object):
+    def __init__(self):
+        self._channels = dict()
+        super(ChannelManager, self).__init__()
+
+    def __getitem__(self, item):
+        """
+        Allows the manager to be queried for channels like a dictionary. The parameter item must be
+        either the name of a channel as a string or a tuple of the form (<channel name>, <uuid>).
+        """
+        if isinstance(item, tuple):
+            name = item[0]
+            uuid = item[1]
+        else:
+            name = item
+            uuid = None
+        return self._get_channel(name, uuid=uuid)
+
+    def _get_channel(self, name, uuid=None):
+        try:
+            channel = self._channels[name]
+        except KeyError:
+            raise NoSuchChannel(name)
+        else:
+            if uuid is not None and channel.uuid != uuid:
+                log.info("The UUID '%s' is not the UUID of channel '%s'", uuid, name)
+                raise UnauthorizedChannelRequest(name)
+            else:
+                return channel
+
+    def create(self, name, uuid):
+        channel = Channel(name, uuid)
+        self._channels[name] = channel
+
+    def remove(self, name, uuid):
+        self._get_channel(name, uuid=uuid).destroy()
+        del self._channels[name]
+
+    @property
+    def active_channels(self):
+        return self._channels.keys()

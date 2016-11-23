@@ -11,9 +11,13 @@ import XCTest
 
 class sound_sendTests: XCTestCase {
     
+    var vc: ViewController!
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        vc = storyboard.instantiateInitialViewController() as! ViewController
     }
     
     override func tearDown() {
@@ -21,16 +25,17 @@ class sound_sendTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGenerateCreateChannelURL() {
+        let url = vc.generateCreateChannelURL(channelname: "test")
+        let uuid = UIDevice.current.identifierForVendor!.uuidString
+        XCTAssert(url == (vc.baseurl+vc.createchannelpath+"test/"+uuid))
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testHandleCreateChannelResponseCode() {
+        let goodcode = vc.channelCreateSuccessStatusCode
+        XCTAssert(vc.handleCreateChannelResponseCode(statuscode: goodcode) == nil)
+        let badcode = vc.channelCreateFailureStatusCode
+        XCTAssert(vc.handleCreateChannelResponseCode(statuscode: badcode) != nil)
     }
     
 }
