@@ -70,7 +70,7 @@ class StreamSegmenter(object):
         """
         Returns a json dump with
         """
-        return json.dump({'url':"http://%s/%s/segs/" % (BASE_URL, self.channel_name),
+        return json.dumps({'url':"http://%s/%s/segs/" % (BASE_URL, self.channel_name),
                           'current':self.total_segs,
                           'format':'m4a'})
 
