@@ -32,7 +32,7 @@ class StreamSegmenter(object):
             self.total_segs = 0
             super(StreamSegmenter, self).__init__()
 
-    def add_segment(self, fileHandle):
+    def add_segment(self, segmentData):
         """
         Adds a segment to the current stream.
         :return:
@@ -48,7 +48,9 @@ class StreamSegmenter(object):
                 os.remove(self.seg_abspath_from_string(segs_on_disk.pop()))
 
         assert len(segs_on_disk) < self.MAX_SEGS_ON_DISK
-        fileHandle.save(self.seg_abspath_from_index(self.total_segs+1))
+        with open(self.seg_abspath_from_index(self.total_segs+1), 'wb') as writable:
+            writable.write(segmentData)
+
         self.total_segs += 1
         log.debug('Added segment %d to %s', self.total_segs, self.channel_name)
 

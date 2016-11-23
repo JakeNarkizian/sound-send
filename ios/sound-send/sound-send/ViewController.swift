@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let baseurl = "http://www.soundsend.com"
-    let createchannelpath = "/channelmanager/createchannel/"
+    let baseurl = "http://127.0.0.1:5000"
+    let createchannelpath = "/channelmanager/create/"
     let channelCreateSuccessStatusCode = 201
     let channelCreateFailureStatusCode = 400
     
@@ -20,16 +20,18 @@ class ViewController: UIViewController {
         return baseurl+createchannelpath+channelname+"/"+uuid
     }
     
+    @IBOutlet weak var channelNameField: UITextField!
     //sends a create channel get request with an input channel name
-    func createChannel(channelname: String) {
-        let url = NSURL(string: generateCreateChannelURL(channelname: channelname))
-        
+    @IBAction func createChannel(_ sender: UIButton) {
+        let channelname = channelNameField.text
+        let url = NSURL(string: generateCreateChannelURL(channelname: channelname!))
         let task = URLSession.shared.dataTask(with: url! as URL) {(data, response, error) in
             self.handleCreateChannelResponse(data: data, response: response, error: error)
         }
         
         task.resume()
     }
+   
     
     //creates an alert with the title "Error" and an input string
     func showAlert(alertstring: String) {

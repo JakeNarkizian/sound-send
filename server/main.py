@@ -42,8 +42,9 @@ class ExceptionHandler(object):
             self._response = flask.Response("No such channel '%s'." % e.message, status=404,
                                             mimetype='text/plain')
         except UnauthorizedChannelRequest as e:
-            self._response = flask.Response("Invalid UUID for '%s'." % e.message, status=403,
-                                            mimetype='text/plain')
+            self._response = flask.Response(*args, **kwargs)#self._response = flask.Response("Invalid UUID for '%s'." % e.message, status=403,
+            #                                mimetype='text/plain')
+            #TODO: should we remove the UUID or uncomment the above check?
         except ChannelCreationError as e:
             self._response = flask.Response("Invalid channel name '%s'." % e.message, status=400,
                                             mimetype='text/plain')
@@ -115,9 +116,8 @@ def channel_listener_count_request(name, uuid):
 def channel_add_segment(name, uuid):
     handler = ExceptionHandler()
     with handler.handle():
-        f = flask.request.files['file']
         channel = channels[name, uuid]
-        channel.stream.add_segment(f)
+        channel.stream.add_segment(flask.request.data)
     return handler.response
 
 

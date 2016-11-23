@@ -107,27 +107,9 @@ class RecordAudioViewController: UIViewController {
     }
     
     func postRecording(audioURL: URL) {
-        /*Alamofire.upload(
-         to: "http://127.0.0.1/5000",
-         method: .POST,
-         headers: ["Authorization" : "Basic xxx"],
-         multipartFormData: { multipartFormData in
-         multipartFormData.appendBodyPart(fileUrl: audioURL, name: "photo")
-         },
-         encodingCompletion: { encodingResult in
-         switch encodingResult {
-         case .Success(let upload, _, _):
-         upload.responseJSON { request, response, JSON, error in
-         
-         
-         }
-         case .Failure(let encodingError): break
-         
-         }
-         }
-         )*/
-        Alamofire.upload(audioURL, to:"http://127.0.0.1/5000").responseJSON { response in
-            debugPrint(response)
+        // TODO: remove hardcoding of URL below
+        Alamofire.upload(audioURL, to:"http://127.0.0.1:5000/test/39DC056D-3A80-4E50-9C48-184A6AC65A30/add_segment").response{
+             response in debugPrint(response)
         }
     }
 
