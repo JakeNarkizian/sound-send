@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "19ED0FFE1DC9BA3400FB687E"
-               BuildableName = "sound-send.app"
-               BlueprintName = "sound-send"
-               ReferencedContainer = "container:sound-send.xcodeproj">
+               BlueprintIdentifier = "19E3760F1DDCEBD6001E804F"
+               BuildableName = "SoundSend3.app"
+               BlueprintName = "SoundSend3"
+               ReferencedContainer = "container:SoundSend3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "19ED10161DC9BA3400FB687E"
-               BuildableName = "sound-sendTests.xctest"
-               BlueprintName = "sound-sendTests"
-               ReferencedContainer = "container:sound-send.xcodeproj">
+               BlueprintIdentifier = "19E376231DDCEBD6001E804F"
+               BuildableName = "SoundSend3Tests.xctest"
+               BlueprintName = "SoundSend3Tests"
+               ReferencedContainer = "container:SoundSend3.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "19ED10211DC9BA3400FB687E"
-               BuildableName = "sound-sendUITests.xctest"
-               BlueprintName = "sound-sendUITests"
-               ReferencedContainer = "container:sound-send.xcodeproj">
+               BlueprintIdentifier = "19E3762E1DDCEBD6001E804F"
+               BuildableName = "SoundSend3UITests.xctest"
+               BlueprintName = "SoundSend3UITests"
+               ReferencedContainer = "container:SoundSend3.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "19ED0FFE1DC9BA3400FB687E"
-            BuildableName = "sound-send.app"
-            BlueprintName = "sound-send"
-            ReferencedContainer = "container:sound-send.xcodeproj">
+            BlueprintIdentifier = "19E3760F1DDCEBD6001E804F"
+            BuildableName = "SoundSend3.app"
+            BlueprintName = "SoundSend3"
+            ReferencedContainer = "container:SoundSend3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "19ED0FFE1DC9BA3400FB687E"
-            BuildableName = "sound-send.app"
-            BlueprintName = "sound-send"
-            ReferencedContainer = "container:sound-send.xcodeproj">
+            BlueprintIdentifier = "19E3760F1DDCEBD6001E804F"
+            BuildableName = "SoundSend3.app"
+            BlueprintName = "SoundSend3"
+            ReferencedContainer = "container:SoundSend3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "19ED0FFE1DC9BA3400FB687E"
-            BuildableName = "sound-send.app"
-            BlueprintName = "sound-send"
-            ReferencedContainer = "container:sound-send.xcodeproj">
+            BlueprintIdentifier = "19E3760F1DDCEBD6001E804F"
+            BuildableName = "SoundSend3.app"
+            BlueprintName = "SoundSend3"
+            ReferencedContainer = "container:SoundSend3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
