@@ -1,14 +1,15 @@
 //
-//  ViewController.swift
-//  Sound-Send
+//  TableFillViewController.swift
+//  sound-send
 //
+//  Created by Sean Torres on 11/23/16.
+//  Copyright © 2016 Aditi Gupta. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet
-    var tableView: UITableView!
+class TableFillViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet var tableView: UITableView!
     var arr: [String] = []
     
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.tableView.reloadData()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -79,5 +80,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("Selected cell #\(indexPath.row)!\n")
         // Add implementation for next screen here.
     }
-}
 
+
+}
