@@ -1,0 +1,1 @@
+{"version": 1.0, "num_listeners": 4, "url": "http://baseurl.com/test1", "broadcaster": "abc123", "user_list": ["test1", "man2", "man3", "man4"], "name": "test1"}
