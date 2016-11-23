@@ -17,6 +17,7 @@
 		194DC9931DE5D663003882B5 /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194DC9921DE5D663003882B5 /* RecordAudioViewController.swift */; };
 		19FF43EF1DE5DE9F00A1F685 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FF43E21DE5DE9000A1F685 /* Alamofire.framework */; };
 		19FF43F01DE5DE9F00A1F685 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19FF43E21DE5DE9000A1F685 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E2120961DE62AED00E98CA9 /* PlayChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2120951DE62AED00E98CA9 /* PlayChannelViewController.swift */; };
 		B0C987EC1DE5E65400A5A101 /* TableFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C987EB1DE5E65400A5A101 /* TableFillViewController.swift */; };
 		B0C987F51DE5F51A00A5A101 /* listviewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C987F41DE5F51A00A5A101 /* listviewTest.swift */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,7 @@
 		194DC9861DE5D1BA003882B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		194DC9921DE5D663003882B5 /* RecordAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAudioViewController.swift; sourceTree = "<group>"; };
 		19FF43D61DE5DE9000A1F685 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		7E2120951DE62AED00E98CA9 /* PlayChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayChannelViewController.swift; sourceTree = "<group>"; };
 		B0C987EB1DE5E65400A5A101 /* TableFillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableFillViewController.swift; sourceTree = "<group>"; };
 		B0C987F41DE5F51A00A5A101 /* listviewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listviewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				194DC9641DE5D1BA003882B5 /* AppDelegate.swift */,
+				7E2120951DE62AED00E98CA9 /* PlayChannelViewController.swift */,
 				194DC9661DE5D1BA003882B5 /* ViewController.swift */,
 				194DC9681DE5D1BA003882B5 /* Main.storyboard */,
 				194DC96B1DE5D1BA003882B5 /* Assets.xcassets */,
@@ -418,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				194DC9931DE5D663003882B5 /* RecordAudioViewController.swift in Sources */,
+				7E2120961DE62AED00E98CA9 /* PlayChannelViewController.swift in Sources */,
 				194DC9671DE5D1BA003882B5 /* ViewController.swift in Sources */,
 				B0C987EC1DE5E65400A5A101 /* TableFillViewController.swift in Sources */,
 				194DC9651DE5D1BA003882B5 /* AppDelegate.swift in Sources */,

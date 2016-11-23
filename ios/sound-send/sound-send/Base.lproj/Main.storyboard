@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -72,7 +69,7 @@
         <!--Table Fill View Controller-->
         <scene sceneID="nWG-tF-1Wm">
             <objects>
-                <viewController id="jcN-gd-l8F" customClass="TableFillViewController" customModule="sound_send" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tableview" id="jcN-gd-l8F" customClass="TableFillViewController" customModule="sound_send" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ez3-IV-xLS"/>
                         <viewControllerLayoutGuide type="bottom" id="24Q-yB-txQ"/>
@@ -125,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="125" y="888"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Channel View Controller-->
         <scene sceneID="uIP-sG-bET">
             <objects>
-                <viewController id="h0c-Mp-cuG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="playchannel" id="h0c-Mp-cuG" customClass="PlayChannelViewController" customModule="sound_send" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JXb-DJ-4JO"/>
                         <viewControllerLayoutGuide type="bottom" id="Nz4-YP-Hgv"/>
@@ -158,7 +155,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Channel name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPp-w2-5MT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="channelname" text="Channel name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPp-w2-5MT">
                                 <frame key="frameInset" minX="25" minY="61" width="325" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -323,7 +320,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7T8-bQ-o6R"/>
+        <segue reference="Kgt-dt-wad"/>
         <segue reference="z5J-Ke-S4P"/>
     </inferredMetricsTieBreakers>
 </document>
