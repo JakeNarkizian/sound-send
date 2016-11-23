@@ -1,3 +1,5 @@
+import json
+
 import os
 
 from server import BASE_URL
@@ -30,7 +32,7 @@ class StreamSegmenter(object):
             self.total_segs = 0
             super(StreamSegmenter, self).__init__()
 
-    def add_segment(self, segmentData):
+    def add_segment(self, fileHandle):
         """
         Adds a segment to the current stream.
         :return:
@@ -46,8 +48,7 @@ class StreamSegmenter(object):
                 os.remove(self.seg_abspath_from_string(segs_on_disk.pop()))
 
         assert len(segs_on_disk) < self.MAX_SEGS_ON_DISK
-        with open(self.seg_abspath_from_index(self.total_segs+1), 'wb') as writable:
-            writable.write(segmentData)
+        fileHandle.save(self.seg_abspath_from_index(self.total_segs+1))
         self.total_segs += 1
         log.debug('Added segment %d to %s', self.total_segs, self.channel_name)
 
@@ -67,21 +68,11 @@ class StreamSegmenter(object):
 
     def get_current_index(self):
         """
-        For details about the formatting of this string see:
-            https://tools.ietf.org/html/draft-pantos-http-live-streaming-20
+        Returns a json dump with
         """
-        # header
-        s  = "#EXT-X-VERSION:3\n"  # defines protocol version
-        s += "#EXTM3U\n"
-        s += "#EXT-X-TARGETDURATION:%s\n" % self.MAX_SEG_LEN
-        s += "#EXT-X-MEDIA-SEQUENCE:1\n\n"
-        # body
-        for i in range(self.total_segs):
-            s += "#EXTINF:%.3f,\n" % self.MAX_SEG_LEN
-            s += "http://%s/%s/segs/%d.ts\n" % (BASE_URL, self.channel_name, i+1)
-        # footer
-        s += "#EXT-X-ENDLIST\n"
-        return s
+        return json.dump({'url':"http://%s/%s/segs/" % (BASE_URL, self.channel_name),
+                          'current':self.total_segs,
+                          'format':'m4a'})
 
     def seg_abspath_from_index(self, i):
         return self.seg_abspath_from_string('%d.ts' % i)

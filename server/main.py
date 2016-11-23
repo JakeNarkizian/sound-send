@@ -88,7 +88,7 @@ def active_channel_request():
     return handler.response
 
 # Channel specific methods for listener
-@server.route('/<name>/index.M3U8')
+@server.route('/<name>/index.json')
 def channel_index_request(name):
     handler = ExceptionHandler()
     with handler.handle(status=200, mimetype='application/x-mpegURL'):
@@ -96,7 +96,7 @@ def channel_index_request(name):
     return handler.response
 
 
-@server.route('/<name>/segs/<int:i>.ts')
+@server.route('/<name>/segs/<int:i>.m4a')
 def channel_segment_request(name, i):
     handler = ExceptionHandler()
     with handler.handle(status=200, mimetype='video/MP2T'):  #TODO: .ts and and the mime type here are probably wrong
@@ -109,6 +109,15 @@ def channel_listener_count_request(name, uuid):
     handler = ExceptionHandler()
     with handler.handle(status=200, mimetype='application/json'):
         handler.set_response_attr(data=json.dumps(dict(count=channels[name].listeners)))
+    return handler.response
+
+@server.route('/<name>/<uuid>/add_segment', methods=['POST'])
+def channel_add_segment(name, uuid):
+    handler = ExceptionHandler()
+    with handler.handle():
+        f = flask.request.files['file']
+        channel = channels[name, uuid]
+        channel.stream.add_segment(f)
     return handler.response
 
 
