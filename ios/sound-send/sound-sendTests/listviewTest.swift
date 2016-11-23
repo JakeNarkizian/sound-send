@@ -5,14 +5,14 @@
 //  Created by Sean Torres on 11/17/16.
 
 import XCTest
-@testable import SoundSend3//moodule
+@testable import sound_send//moodule
 class listviewTest: XCTestCase {
-    var vc:ViewController!
+    var vc:TableFillViewController!
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        vc = storyboard.instantiateInitialViewController() as! ViewController
+        vc = storyboard.instantiateInitialViewController() as! TableFillViewController
     }
     
     override func tearDown() {
@@ -50,20 +50,18 @@ class listviewTest: XCTestCase {
         let num = vc.arr.count
         XCTAssert(num == 3)
     }
-        
-// BLACK BOX TEST (relys on server and client)
+    
+    // BLACK BOX TEST (relys on server and client)
     func testforallactivelistners () {
-         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-         vc = storyboard.instantiateInitialViewController() as! ViewController
-         vc.tableView = UITableView()
-         vc.arr = ["1", "2", "3"]
-         vc.tableView.reloadData()
-         
-         print("ROWS: \(vc.tableView.numberOfRows(inSection: 0)))")
-         XCTAssert(vc.tableView.numberOfSections == 3)
-    }
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        vc = storyboard.instantiateInitialViewController() as! TableFillViewController
+        vc.tableView = UITableView()
+        vc.arr = ["1", "2", "3"]
+        vc.tableView.reloadData()
         
+        print("ROWS: \(vc.tableView.numberOfRows(inSection: 0)))")
+        XCTAssert(vc.tableView.numberOfSections == 3)
+    }
+    
 }
-
-
 
