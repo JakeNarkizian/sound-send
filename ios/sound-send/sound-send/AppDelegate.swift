@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  sound-send
 //
-//  Created by Jake Narkizian on 10/20/16.
-//  Copyright © 2016 Jake Narkizian. All rights reserved.
+//  Created by Aditi Gupta on 11/23/16.
+//  Copyright © 2016 Aditi Gupta. All rights reserved.
 //
 
 import UIKit
