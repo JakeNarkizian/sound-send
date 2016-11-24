@@ -116,7 +116,7 @@ def channel_listener_count_request(name, uuid):
 def channel_add_segment(name, uuid):
     handler = ExceptionHandler()
     with handler.handle():
-        channel = channels[name, uuid]
+        channel = channels[name]
         channel.stream.add_segment(flask.request.data)
     return handler.response
 

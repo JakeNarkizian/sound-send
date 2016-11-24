@@ -22,7 +22,7 @@ class PlayChannelViewController: UIViewController {
     var downloadedSoundEnds:TimeInterval? = nil
     var latestPlayed:Int? = nil
     var stillPlaying = true
-    var channelname:String = "insertchannelnamehere"
+    var channelname:String = "test"
     
     func generateCreateChannelURL(channelname: String) -> String {
         let uuid = UIDevice.current.identifierForVendor!.uuidString
@@ -88,7 +88,7 @@ class PlayChannelViewController: UIViewController {
     //so its like a queue
     func playSound(sound:Data) {
         do {
-            players.append(try AVAudioPlayer(data: sound, fileTypeHint: "m4a"))
+            players.append(try AVAudioPlayer(data: sound))
             guard let player = players[players.count-1] else { return }
             if (downloadedSoundEnds == nil) {
                 print(player.deviceCurrentTime)
@@ -120,6 +120,7 @@ class PlayChannelViewController: UIViewController {
         //let url = NSURL(string: generateGetChunkURL(channelname: channelname, currentchunk: currentchunk))
         let url = NSURL(string: urlstring)
         let task = URLSession.shared.dataTask(with: url! as URL) {(data, response, error) in
+            print(data)
             self.handleGetChunkResponse(data: data, response: response, error: error)
         }
         
@@ -149,7 +150,7 @@ class PlayChannelViewController: UIViewController {
                 let nexttoplay = getNextChunk(chunk: chunk)
                 if (nexttoplay != nil) {
                     latestPlayed = nexttoplay
-                    let url = ((json?["url"] as! NSString) as String) + String(nexttoplay!) + ((json?["format"] as! NSString) as String)
+                    let url = /*((json?["url"] as! NSString) as String)*/"http://127.0.0.1:5000/test/segs/" + String(nexttoplay!) + "." + ((json?["format"] as! NSString) as String)
                     getChunk(urlstring: url)
                 }
                 
