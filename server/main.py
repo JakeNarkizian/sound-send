@@ -100,7 +100,7 @@ def channel_index_request(name):
 @server.route('/<name>/segs/<int:i>.m4a')
 def channel_segment_request(name, i):
     handler = ExceptionHandler()
-    with handler.handle(status=200, mimetype='video/MP2T'):  #TODO: .ts and and the mime type here are probably wrong
+    with handler.handle(status=200, mimetype='audio/mp4'):
         handler.set_response_attr(data=channels[name].segment(i))
     return handler.response
 

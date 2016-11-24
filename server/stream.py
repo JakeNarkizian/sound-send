@@ -77,7 +77,7 @@ class StreamSegmenter(object):
                           'format':'m4a'})
 
     def seg_abspath_from_index(self, i):
-        return self.seg_abspath_from_string('%d.ts' % i)
+        return self.seg_abspath_from_string('%d.m4a' % i)
 
     def seg_abspath_from_string(self, s):
         return os.path.join(self.seg_dir_abspath, s)
