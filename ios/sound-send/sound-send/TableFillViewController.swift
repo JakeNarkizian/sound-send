@@ -17,11 +17,7 @@ class TableFillViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         // Do any additional setup after loading the view, typically from a nib.
-        let myURL: String = "http://127.0.0.1:5000/channelmanager/create/apple200/12345"
-        let myURL2: String = "http://127.0.0.1:5000/channelmanager/create/apple400/12345"
         let myURL3: String = "http://127.0.0.1:5000/channelmanager/active"
-        makeHTTPCall(requestURL: myURL)
-        makeHTTPCall(requestURL: myURL2)
         makeHTTPCall(requestURL: myURL3)
         
         DispatchQueue.main.async{
@@ -77,8 +73,11 @@ class TableFillViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected cell #\(indexPath.row)!\n")
+        var itemSelected = (tableView.cellForRow(at: indexPath)?.textLabel?.text)!
         // Add implementation for next screen here.
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let playchannel = storyboard.instantiateViewController(withIdentifier: "playchannel")
+        present(playchannel, animated: true, completion: nil)
     }
 
 

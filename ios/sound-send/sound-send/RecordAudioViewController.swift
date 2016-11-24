@@ -108,7 +108,7 @@ class RecordAudioViewController: UIViewController {
     
     func postRecording(audioURL: URL) {
         // TODO: remove hardcoding of URL below
-        Alamofire.upload(audioURL, to:"http://127.0.0.1:5000/test/39DC056D-3A80-4E50-9C48-184A6AC65A30/add_segment").response{
+        Alamofire.upload(audioURL, to:"http://127.0.0.1:5000/test/"+UIDevice.current.identifierForVendor!.uuidString+"/add_segment").response{
              response in debugPrint(response)
         }
     }
